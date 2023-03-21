@@ -1,0 +1,29 @@
+//!criaremos um timer utilizando java
+package pl01;
+
+public class main {
+	public static void main(String[] args) throws InterruptedException
+	{
+		int segundos, minutos, horas;
+        segundos = 00;
+        minutos = 00;
+        horas = 24;
+        
+        while(horas>00){
+            segundos ++;
+            System.out.println("horas:"+horas+"minutos:"+minutos+"segundos:"+segundos);
+            
+            if(segundos == 60)
+            {	
+            	segundos = 59;
+            	minutos --;
+            }
+            if(minutos == 00)
+            {
+            	minutos =60
+            	horas --;
+            }
+        }
+        
+	}
+}

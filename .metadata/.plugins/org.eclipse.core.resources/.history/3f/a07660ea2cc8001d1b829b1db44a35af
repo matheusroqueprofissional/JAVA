@@ -1,0 +1,51 @@
+
+//!criaremos um timer utilizando java
+package pl01;
+
+import java.util.Scanner;
+
+
+public class main {
+	public int menu() {
+	
+		return 0;
+	}
+
+	public static void main(String[] args) throws InterruptedException
+	{int segundos, minutos, horas;
+	System.out.println("===TIMERJAV===");
+	System.out.println("digite o tempo que voce ira definir o timer:");
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("HORAS:");
+		horas = scan.nextInt();
+		System.out.println("Minutos:");
+		minutos = scan.nextInt();
+		System.out.println("Segundos:");
+		segundos = scan.nextInt();
+        System.out.println("segundos: "+segundos);
+        
+        while(horas >=0) {
+        	minutos = 59;
+        	horas --;
+        	System.out.println(" | horas: "+horas+" | minutos: "+minutos+" | segundos: "+segundos+"|");
+
+        while(minutos !=0) {
+        	segundos =59;
+        	minutos --;
+        	System.out.println(" | horas: "+horas+" | minutos: "+minutos+" | segundos: "+segundos+"|");
+        while(segundos !=0) {
+        	try {
+        	    Thread.sleep(1000); // 1000 milissegundos = 1 segundo
+        	} catch (InterruptedException e) {
+        	    // Tratar a exceção, se necessário
+        	}
+        	segundos --;
+        	System.out.println(" | horas: "+horas+" | minutos: "+minutos+" | segundos: "+segundos+"|");
+        	
+            
+        }}}
+     System.out.println("|========================================|");
+     System.out.println("cronometro finalizado");
+	}
+}
